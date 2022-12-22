@@ -4,7 +4,7 @@
 # - 6782 -> 23
 # - 0,56 -> 11
 
-number = float(input('Введите число -> '))
+number = abs(float(input('Введите число -> ')))
 sum = 0
 if number < 0:
     number *= -1
@@ -15,3 +15,8 @@ while number > 0:
     sum = sum + digit
     number = number // 10
 print (f'Сумма цифр числа равна: {sum}')
+
+for i in str(number):
+    if i != '.' and i != ',':
+        sum += int(i)
+print(sum)
